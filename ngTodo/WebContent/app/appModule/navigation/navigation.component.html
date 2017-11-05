@@ -1,0 +1,7 @@
+<nav>
+	<button><a href="#/">Home</a></button>
+	<button ng-show="vm.isLoggedIn()"><a href="#/todos">Todos</a></button>
+	<button><a href="#/about">About</a></button>
+	<button><a href="#/contact">Contact</a></button>
+	<logout ng-show="vm.isLoggedIn()"></logout>
+</nav>
