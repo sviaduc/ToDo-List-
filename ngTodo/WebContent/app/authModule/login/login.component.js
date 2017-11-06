@@ -9,10 +9,12 @@ angular.module('authModule')
      	vm.login = function(user){
      		authService.login(user)
      		.then(function(res) {
-     			if(res.data != null){
-     			$location.path('/todos');
-     			}
-     			$location.path('/_404');
+	     		if(res.data != null){
+	     			$location.path('/todos');
+	     		}
+	     		else{
+	     			$location.path('/_404');
+	     		}
      		})
      	}
      	

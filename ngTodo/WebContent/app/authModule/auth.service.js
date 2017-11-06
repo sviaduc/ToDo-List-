@@ -33,6 +33,13 @@ angular.module('authModule')
   	      },
   	      data : user
   	    })
+  	    .then(function(res){
+  	    		saveToken(res.data);
+  	    		return res;
+  	    })
+  	    .catch(function(){
+  	    		console.log('it broke');
+  	    })
   	     
       // TODO : Use the auth/login route to authenticate the user
       // On success, use saveToken to store the users id/email
